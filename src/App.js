@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import Home from './Home';
+import Checkout from './Checkout';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,24 +15,19 @@ import {
 function App() {
   return (
     <Router>
-    <div className="App">
-      <Switch>
-        <Route path="/checkout">
-          <Header/>
-  
-        </Route>
-        <Route path="/">
-          <Header/>
-          <Home/>
-        </Route>
-      </Switch>
-      
-    </div>
+      <div className="app">
+        <Header />
 
+        <Switch>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
     </Router>
-
-    
-    
   );
 }
 
